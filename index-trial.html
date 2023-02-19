@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="heading">Forms</h1>
+
+      <form class="contact-form" action="">
+        <!-- <div class="form contact-form"> -->
+        <!-- <h2 class="title">Contact info</h2> -->
+        <fieldset>
+          <legend>Sign in</legend>
+          <label for="email">
+            Email
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="olgabilinskaya@gmail.com"
+            />
+          </label>
+
+          <label for="password">
+            Password
+            <input
+              type="password"
+              name="password"
+              placeholder="12345678"
+              id="user-password"
+              autofocus
+            />
+          </label>
+        </fieldset>
+        <!-- </div> -->
+
+        <div class="phone-form form" role="group" aria-labelledby="phone-head">
+          <p id="phone-head">Phone number</p>
+          <!-- <h2 class="phone-header title">Phone number</h2> -->
+          <label for="">
+            <input type="tel" name="phone-number" placeholder="+38()" />
+          </label>
+        </div>
+
+        <div class="sex-form form" role="group" aria-labelledby="sex-head">
+          <p id="sex-head">Your sex</p>
+          <!-- <h2 class="sex-title title">Your sex:</h2> -->
+          <div class="sex">
+            <label for="sex">
+              Male
+              <input type="radio" name="sex" value="male" />
+            </label>
+            <label for="sex">
+              Female
+              <input type="radio" name="sex" value="female" checked />
+            </label>
+            <label for="">
+              Non-specified
+              <input type="radio" name="sex" value="non-specified" />
+            </label>
+          </div>
+        </div>
+
+        <div class="age-form form" role="group" aria-labelledby="age-head">
+          <p id="age-head">Your age</p>
+          <!-- <h2 class="age-title title">Your age</h2> -->
+          <label for="">
+            <input type="number" name="age" value="" min="15" max="100" />
+          </label>
+        </div>
+
+        <div
+          class="countries-form form"
+          role="group"
+          aria-labelledby="countries-head"
+        >
+          <p id="countries-head">
+            What countries from the list have you visited?
+          </p>
+          <div class="countries-list">
+            <label for="">
+              Ukraine
+              <input type="checkbox" name="country" value="ukraine" checked />
+            </label>
+            <label for="">
+              Romania
+              <input type="checkbox" name="country" value="romania" checked />
+            </label>
+            <label for="">
+              Norway
+              <input type="checkbox" name="country" value="norway" />
+            </label>
+            <label for="">
+              France
+              <input type="checkbox" name="country" value="france" checked />
+            </label>
+          </div>
+        </div>
+
+        <div class="form" role="group" aria-labelledby="temperature-head">
+          <p id="temperature-head">Preferred temperature</p>
+          <label for="">
+            <input
+              type="range"
+              name="temperature"
+              value="25"
+              min="-10"
+              max="45"
+              step="2"
+            />
+          </label>
+        </div>
+
+        <div class="form" role="group" aria-labelledby="size-head">
+          <p id="size-head">Your size</p>
+          <label for="size"></label>
+          <select name="size" id="size">
+            <option value="xs">Extra Small</option>
+            <option value="s">Small</option>
+            <option value="m" selected>Medium</option>
+            <option value="l">Large</option>
+          </select>
+        </div>
+
+        <div class="form" role="group" aria-labelledby="month-head">
+          <p id="month-head">Your favorite month</p>
+          <label for="month"></label>
+          <select name="month" id="month">
+            <optgroup label="Spring">
+              <option value="s3">March</option>
+              <option value="s4">April</option>
+              <option value="s5">May</option>
+            </optgroup>
+
+            <optgroup label="Summer">
+              <option value="s6">June</option>
+              <option value="s7">July</option>
+              <option value="s8" selected>August</option>
+            </optgroup>
+
+            <optgroup label="Autumn">
+              <option value="s9">September</option>
+              <option value="s10">October</option>
+              <option value="s11">November</option>
+            </optgroup>
+
+            <optgroup label="Winter">
+              <option value="s12">December</option>
+              <option value="s1">January</option>
+              <option value="s2">February</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form" role="group" aria-labelledby="animal-head">
+          <p id="animal-head">Choose your favorite animal</p>
+          <label for="fav"> </label>
+          <input list="animals" name="fav" id="fav" />
+          <datalist id="animals">
+            <option>Monkey</option>
+            <option>Cat</option>
+            <option>Dog</option>
+            <option>Turtle</option>
+            <option>Hamster</option>
+          </datalist>
+        </div>
+
+        <div class="form" role="group" aria-labelledby="country-head">
+          <p id="country-head">Choose your country code</p>
+          <label for="country"></label>
+          <input type="text" name="country" id="country" list="countries" />
+          <datalist id="countries">
+            <option value="UA">Ukraine</option>
+            <option value="UK">The United Kingdom</option>
+            <option value="AU">Australia</option>
+            <option value="VN">Vietnam</option>
+            <option value="RO">Romania</option>
+          </datalist>
+        </div>
+
+        <fieldset>
+          <legend>Feedback</legend>
+          <label for="">
+            <textarea
+              name="feedback"
+              id=""
+              cols="30"
+              rows="7"
+              placeholder="Type your text here"
+            ></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dates</legend>
+          <label for="">
+            Date of Birth (DOB)
+            <input type="date" min="1930-01-01" max="2023-02-01" />
+          </label>
+          <label for="">
+            Time
+            <input type="time" />
+          </label>
+          <label for="">
+            Date and Time
+            <input
+              type="datetime-local"
+              min="2000-01-01T00:00"
+              max="2030-12-01T00:00"
+            />
+          </label>
+        </fieldset>
+
+        <label for="">
+          <button type="submit" class="submit">Submit</button>
+        </label>
+      </form>
+    </div>
+  </body>
+</html>
